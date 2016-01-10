@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Summonses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Student</th>
+      <th>Teacher</th>
+      <th>Reason</th>
+      <th>Place</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @summonses.each do |summons| %>
+      <tr>
+        <td><%= summons.student %></td>
+        <td><%= summons.teacher %></td>
+        <td><%= summons.reason %></td>
+        <td><%= summons.place %></td>
+        <td><%= link_to 'Show', summons %></td>
+        <td><%= link_to 'Edit', edit_summons_path(summons) %></td>
+        <td><%= link_to 'Destroy', summons, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Summons', new_summons_path %>

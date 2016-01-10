@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Student:</strong>
+  <%= @summons.student %>
+</p>
+
+<p>
+  <strong>Teacher:</strong>
+  <%= @summons.teacher %>
+</p>
+
+<p>
+  <strong>Reason:</strong>
+  <%= @summons.reason %>
+</p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @summons.place %>
+</p>
+
+<%= link_to 'Edit', edit_summons_path(@summons) %> |
+<%= link_to 'Back', summonses_path %>

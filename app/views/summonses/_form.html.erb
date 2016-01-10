@@ -1,0 +1,33 @@
+<%= form_for(@summons) do |f| %>
+  <% if @summons.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@summons.errors.count, "error") %> prohibited this summons from being saved:</h2>
+
+      <ul>
+      <% @summons.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :student %><br>
+    <%= f.text_field :student %>
+  </div>
+  <div class="field">
+    <%= f.label :teacher %><br>
+    <%= f.text_field :teacher %>
+  </div>
+  <div class="field">
+    <%= f.label :reason %><br>
+    <%= f.text_field :reason %>
+  </div>
+  <div class="field">
+    <%= f.label :place %><br>
+    <%= f.text_field :place %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

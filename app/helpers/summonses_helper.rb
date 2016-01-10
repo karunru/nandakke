@@ -1,0 +1,2 @@
+module SummonsesHelper
+end
