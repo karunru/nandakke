@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Schedule type:</strong>
+  <%= @schedule.schedule_type %>
+</p>
+
+<p>
+  <strong>Deadline date:</strong>
+  <%= @schedule.deadline_date %>
+</p>
+
+<p>
+  <strong>Deadline time:</strong>
+  <%= @schedule.deadline_time %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @schedule.subject %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @schedule.title %>
+</p>
+
+<p>
+  <strong>Submit method:</strong>
+  <%= @schedule.submit_method %>
+</p>
+
+<%= link_to 'Edit', edit_schedule_path(@schedule) %> |
+<%= link_to 'Back', schedules_path %>

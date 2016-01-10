@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  schedule_type: 1
+  deadline_date: 2016-01-10
+  deadline_time: 2016-01-10 12:00:45
+  subject: MyString
+  title: MyString
+  submit_method: MyString
+
+two:
+  schedule_type: 1
+  deadline_date: 2016-01-10
+  deadline_time: 2016-01-10 12:00:45
+  subject: MyString
+  title: MyString
+  submit_method: MyString
