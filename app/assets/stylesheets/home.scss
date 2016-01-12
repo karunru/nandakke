@@ -3,11 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .summons {
-  background: #BCF5A9;
+  background: #01DF01;
 }
 
 .schedule {
-  background: #64FE2E;
+  background: #0431B4;
 }
 
 .summons, .schedule {
@@ -22,7 +22,7 @@ p {
 
 @media (min-width: 600px) {
   body {
-    background: linear-gradient(90deg, #BCF5A9 50%, #64FE2E 50%);
+    background: linear-gradient(90deg, #01DF01 50%, #0431B4 50%);
   }
   .flexbox {
     width: 1920px;
