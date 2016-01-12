@@ -1,3 +1,38 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.summons {
+  background: #BCF5A9;
+}
+
+.schedule {
+  background: #64FE2E;
+}
+
+.summons, .schedule {
+  color: rgba(255, 255, 255, 0.4);
+  padding: 2%;
+  text-align: center;
+}
+
+p {
+  text-align: left;
+}
+
+@media (min-width: 600px) {
+  body {
+    background: linear-gradient(90deg, #BCF5A9 50%, #64FE2E 50%);
+  }
+  .flexbox {
+    width: 1920px;
+    margin: 0 auto;
+    display: -webkit-flex;
+    display: flex;
+  }
+  .summons, .schedule {
+    -webkit-flex: 1;
+    flex: 1;
+    background: none;
+  }
+}

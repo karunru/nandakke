@@ -1,5 +1,12 @@
 <h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
 
-<%= render template: "summonses/index" %>
-<%= render template: "schedules/index" %>
+<div class="flexbox">
+  <article class="summons">
+    <h1>呼び出し情報</h1>
+		<%= render template: "summonses/index" %>
+  </article>
+  <article class="schedule">
+    <h1>今後の予定</h1>
+		<%= render template: "schedules/index" %>
+  </article>
+</div>
