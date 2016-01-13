@@ -19,8 +19,8 @@
     <% @schedules.each do |schedule| %>
       <tr>
         <td><%= schedule.schedule_type %></td>
-        <td><%= schedule.deadline_date %></td>
-        <td><%= schedule.deadline_time %></td>
+        <td><%= schedule.deadline_date.strftime('%Y年%m月%d日') %></td>
+        <td><%= schedule.deadline_time.strftime('%H時%M分') %></td>
         <td><%= schedule.subject %></td>
         <td><%= schedule.title %></td>
         <td><%= schedule.submit_method %></td>

@@ -17,7 +17,7 @@
   <tbody>
     <% @summonses.each do |summons| %>
       <tr>
-        <td><%= summons.created_at %></td>
+        <td><%= summons.created_at.strftime('%Y年%m月%d日') %></td>
         <td><%= summons.student %></td>
         <td><%= summons.teacher %></td>
         <td><%= summons.reason %></td>
