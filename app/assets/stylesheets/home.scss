@@ -20,8 +20,11 @@ p {
   text-align: left;
 }
 
-th,tr,td {
-	font-size:32px;
+table,th,td {
+	border: 1px;
+	border-style: solid;
+	border-color: #808080;
+	font-size:26px;
 }
 
 @media (min-width: 600px) {
