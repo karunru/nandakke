@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# Read:http://ruby-rails.hatenadiary.com/entry/20140801/1406907000
+gem 'devise'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
