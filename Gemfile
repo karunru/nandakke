@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# Read:http://qiita.com/satomin/items/11e16f323ed36a0cb7ab
+gem 'rename'
+
 # Read:http://ruby-rails.hatenadiary.com/entry/20140801/1406907000
 gem 'devise'
 
