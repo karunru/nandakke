@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'cancancan'
+
 # Read:http://qiita.com/satomin/items/11e16f323ed36a0cb7ab
 gem 'rename'
 
