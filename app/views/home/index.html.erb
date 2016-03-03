@@ -5,8 +5,8 @@
 				<thead>
 					<tr>
 						<th>呼び出し日</th>
-						<th>学生氏名</th>
-						<th>呼び出し先</th>
+						<th nowrap>学生氏名</th>
+						<th nowrap>呼び出し先</th>
 						<th>理由</th>
 						<th>行く場所</th>
 				</tr>
@@ -15,7 +15,7 @@
 		<tbody>
 			<% @summonses.each do |summons| %>
 				<tr>
-					<td><%= summons.created_at.strftime('%Y年%m月%d日') %></td>
+					<td nowrap><%= summons.created_at.strftime('%Y年%m月%d日') %></td>
 				  <td><%= summons.student %></td>
 					<td><%= summons.teacher %></td>
 					<td><%= summons.reason %></td>
@@ -31,7 +31,6 @@
 		<table>
 			<thead>
 				<tr>
-					<th>分類</th>
 					<th>締切日</th>
 					<th>締切時間</th>
 					<th>教科</th>
@@ -43,9 +42,8 @@
 		<tbody>
 			<% @schedules.each do |schedule| %>
 				<tr>
-					<td><%= schedule.schedule_type %></td>
-					<td><%= schedule.deadline_date.strftime('%Y年%m月%d日') %></td>
-					<td><%= schedule.deadline_time.strftime('%H時%M分') %></td>
+					<td nowrap><%= schedule.deadline_date.strftime('%Y年%m月%d日') %></td>
+					<td nowrap><%= schedule.deadline_time.strftime('%H時%M分') %></td>
 					<td><%= schedule.subject %></td>
 					<td><%= schedule.title %></td>
 					<td><%= schedule.submit_method %></td>

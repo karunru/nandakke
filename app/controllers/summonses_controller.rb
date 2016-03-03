@@ -1,5 +1,6 @@
 class SummonsesController < ApplicationController
   before_action :set_summons, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, :except=>[:home]
 
   # GET /summonses
   # GET /summonses.json
