@@ -5,12 +5,11 @@
 <table>
   <thead>
     <tr>
-      <th>分類</th>
-      <th>締切日</th>
-      <th>締切時間</th>
-      <th>教科</th>
+      <th>日付</th>
+      <th>時間</th>
       <th>タイトル</th>
-      <th>提出方法</th>
+      <th>内容</th>
+      <th>その他</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,7 +17,6 @@
   <tbody>
     <% @schedules.each do |schedule| %>
       <tr>
-        <td><%= schedule.schedule_type %></td>
         <td><%= schedule.deadline_date.strftime('%Y年%m月%d日') %></td>
         <td><%= schedule.deadline_time.strftime('%H時%M分') %></td>
         <td><%= schedule.subject %></td>
