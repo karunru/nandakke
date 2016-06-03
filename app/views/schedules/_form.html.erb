@@ -12,27 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :schedule_type %><br>
-    <%= f.number_field :schedule_type %>
-  </div>
-  <div class="field">
-    <%= f.label :deadline_date %><br>
+    <%= f.label :deadline_date, '締め切り日' %><br>
     <%= f.date_select :deadline_date %>
   </div>
   <div class="field">
-    <%= f.label :deadline_time %><br>
+    <%= f.label :deadline_time, '締め切り時間' %><br>
     <%= f.time_select :deadline_time %>
   </div>
   <div class="field">
-    <%= f.label :subject %><br>
+    <%= f.label :subject, 'タイトル' %><br>
     <%= f.text_field :subject %>
   </div>
   <div class="field">
-    <%= f.label :title %><br>
+    <%= f.label :title, '内容' %><br>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :submit_method %><br>
+    <%= f.label :submit_method, 'その他' %><br>
     <%= f.text_field :submit_method %>
   </div>
   <div class="actions">
