@@ -29,4 +29,7 @@ class User < ActiveRecord::Base
     false
   end
 
+	#cancanでの権限管理用
+	ROLES = %i[member admin]
+
 end
