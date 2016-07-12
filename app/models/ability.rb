@@ -28,14 +28,13 @@ class Ability
     #
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
-    case user.username
-    when  "admin"
-      can :manege, :all
-    when "j12439" || "j12427"
-      can [:create,:update], Schedule
-    else
-      cannot [:create,:update,:destroy], Schedule
-      cannot [:create,:destroy], Summons
-    end
+		def initialize(user)
+			if user.role == 'admin'
+				can :manege, Summons
+				can :manege, Schedule
+			elsif user.role == 'member'
+				can :read, :all
+			end
+		end
   end
 end

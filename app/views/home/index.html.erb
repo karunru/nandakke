@@ -1,7 +1,10 @@
 <div class="flexbox">
   <article class="summons">
     <h1>呼び出し情報</h1>
-			<table>
+		<% if can? :manege, Summons %>
+			<%= link_to 'edit summonses', '/summonses', :style=>"font-size: small;" %>
+		<% end %>
+		<table>
 				<thead>
 					<tr>
 						<th>呼び出し日</th>
@@ -28,6 +31,9 @@
 
 	<article class="schedule">
     <h1>今後の予定</h1>
+		<% if can? :manege, Schedule %>
+			<%= link_to 'edit schedules', '/schedules', :style=>"font-size: small;" %>
+		<% end %>
 		<table>
 			<thead>
 				<tr>
