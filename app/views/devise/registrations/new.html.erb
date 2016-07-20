@@ -26,6 +26,11 @@
 		<%= f.collection_select(:role, User::ROLES, :to_s, lambda{|i| i.to_s.humanize}) %>
   </div>
 
+	<div class="field">
+		<%= f.label :classroom, 'class'%>
+		<%= f.select(:classroom,["1J","2J","3J","4J","5J"])%>
+	</div>
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
