@@ -6,6 +6,7 @@ class SchedulesController < ApplicationController
   # GET /schedules.json
   def index
     @schedules = Schedule.all
+		@schedules = Schedule.all.where(classroom: current_user.classroom)
   end
 
   # GET /schedules/1
@@ -70,6 +71,6 @@ class SchedulesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def schedule_params
-      params.require(:schedule).permit(:schedule_type, :deadline_date, :deadline_time, :subject, :title, :submit_method)
+      params.require(:schedule).permit(:schedule_type, :deadline_date, :deadline_time, :subject, :title, :submit_method, :classroom)
     end
 end

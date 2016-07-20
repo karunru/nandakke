@@ -27,6 +27,9 @@
     <%= f.label :place, '場所' %><br>
     <%= f.text_field :place %>
   </div>
+  <div class="field">
+		<%= f.hidden_field :classroom, :value => current_user.classroom%>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

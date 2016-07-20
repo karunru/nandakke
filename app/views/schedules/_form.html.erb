@@ -31,6 +31,10 @@
     <%= f.label :submit_method, 'その他' %><br>
     <%= f.text_field :submit_method %>
   </div>
+  <div class="field">
+		<%= f.hidden_field :classroom, :value => current_user.classroom%>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
