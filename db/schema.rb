@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160712080415) do
+ActiveRecord::Schema.define(version: 20160720055819) do
 
   create_table "schedules", force: :cascade do |t|
     t.integer  "schedule_type"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20160712080415) do
     t.string   "submit_method"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.string   "classroom"
   end
 
   create_table "summonses", force: :cascade do |t|
@@ -30,6 +31,7 @@ ActiveRecord::Schema.define(version: 20160712080415) do
     t.string   "place"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "classroom"
   end
 
   create_table "users", force: :cascade do |t|
@@ -47,6 +49,7 @@ ActiveRecord::Schema.define(version: 20160712080415) do
     t.datetime "updated_at",                          null: false
     t.string   "username"
     t.string   "role"
+    t.string   "classroom"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
