@@ -30,6 +30,6 @@ class User < ActiveRecord::Base
   end
 
 	#cancanでの権限管理用
-	ROLES = %i[member admin]
+	ROLES = %i[member admin super_user]
 
 end

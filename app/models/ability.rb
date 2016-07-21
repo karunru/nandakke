@@ -4,7 +4,7 @@ class Ability
   def initialize(user)
     # Define abilities for the passed in user here. For example:
     #
-    #   user ||= User.new # guest user (not logged in)
+       user ||= User.new # guest user (not logged in)
     #   if user.admin?
     #     can :manage, :all
     #   else
@@ -29,11 +29,17 @@ class Ability
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
 		def initialize(user)
-			if user.role == 'admin'
-				can :manege, Summons
-				can :manege, Schedule
+			if user.role == 'super_user'
+				can :manege, :all
+			elsif user.role == 'admin'
+				can :manege, Summons, owner: user	#表示されないけど一応自分がオーナーの情報しか編集できないようにする
+				can :manege, Schedule, owner: user
+				cannot :manege, User
 			elsif user.role == 'member'
 				can :read, :all
+				can :manege, User
+			else
+				cannot :manege, User
 			end
 		end
   end
