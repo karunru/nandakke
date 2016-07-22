@@ -1,7 +1,9 @@
 class Users::RegistrationsController < Devise::RegistrationsController 
-	prepend_before_filter :require_no_authentication, :only => [ :cancel]
-	prepend_before_filter :authenticate_scope!, :only => [:new, :create ,:edit, :update, :destroy]
-	
+	before_action :authenticate_user!, :redirect_unless_admin
+
+	prepend_before_action :require_no_authentication, :only => [ :cancel]
+	prepend_before_action :authenticate_scope!, :only => [:new, :create ,:edit, :update, :destroy]
+
 # before_action :configure_sign_up_params, only: [:create]
 # before_action :configure_account_update_params, only: [:update]
 
@@ -39,7 +41,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  # protected
+  protected
 
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_sign_up_params
@@ -60,4 +62,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
+  def redirect_unless_admin
+    if current_user.role != 'super_user'
+      redirect_to root_path
+		end
+	end
 end
