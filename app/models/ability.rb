@@ -29,9 +29,9 @@ class Ability
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
 		def initialize(user)
-			if user.role == 'super_user'
+			if user.role == 'admin'
 				can :manege, :all
-			elsif user.role == 'admin'
+			elsif user.role == 'editor'
 				can :manege, Summons, owner: user	#表示されないけど一応自分がオーナーの情報しか編集できないようにする
 				can :manege, Schedule, owner: user
 				cannot :manege, User
