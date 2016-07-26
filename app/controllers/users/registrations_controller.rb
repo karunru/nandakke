@@ -63,7 +63,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super(resource)
   # end
   def redirect_unless_admin
-    if current_user.role != 'super_user'
+    if current_user.role != 'admin'
       redirect_to root_path
 		end
 	end
