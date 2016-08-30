@@ -6,7 +6,7 @@ gem 'cancancan'
 gem 'rename'
 
 # Read:http://ruby-rails.hatenadiary.com/entry/20140801/1406907000
-gem 'devise', git: 'https://github.com/plataformatec/devise.git'
+gem 'devise'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'

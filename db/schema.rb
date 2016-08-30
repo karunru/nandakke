@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,47 +11,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160720055819) do
+ActiveRecord::Schema.define(version: 20160118022138) do
 
   create_table "schedules", force: :cascade do |t|
-    t.integer  "schedule_type"
+    t.integer  "schedule_type", limit: 4
     t.date     "deadline_date"
     t.time     "deadline_time"
-    t.string   "subject"
-    t.string   "title"
-    t.string   "submit_method"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-    t.string   "classroom"
+    t.string   "subject",       limit: 255
+    t.string   "title",         limit: 255
+    t.string   "submit_method", limit: 255
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
   create_table "summonses", force: :cascade do |t|
-    t.string   "student"
-    t.string   "teacher"
-    t.string   "reason"
-    t.string   "place"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "classroom"
+    t.string   "student",    limit: 255
+    t.string   "teacher",    limit: 255
+    t.string   "reason",     limit: 255
+    t.string   "place",      limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "email"
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
+    t.string   "email",                  limit: 255, default: "", null: false
+    t.string   "encrypted_password",     limit: 255, default: "", null: false
+    t.string   "reset_password_token",   limit: 255
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",          limit: 4,   default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.string   "username"
-    t.string   "role"
-    t.string   "classroom"
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.string   "current_sign_in_ip",     limit: 255
+    t.string   "last_sign_in_ip",        limit: 255
+    t.datetime "created_at",                                      null: false
+    t.datetime "updated_at",                                      null: false
+    t.string   "username",               limit: 255
   end
 
 end
