@@ -1,15 +1,18 @@
 source 'https://rubygems.org'
 
+gem 'cancancan'
+
 # Read:http://qiita.com/satomin/items/11e16f323ed36a0cb7ab
 gem 'rename'
 
 # Read:http://ruby-rails.hatenadiary.com/entry/20140801/1406907000
-gem 'devise'
+gem 'devise', git: 'https://github.com/plataformatec/devise.git'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.5'
+gem 'rails', '5.0.0'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#gem 'sqlite3'
+gem 'mysql2','~>0.3.17'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -32,7 +35,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

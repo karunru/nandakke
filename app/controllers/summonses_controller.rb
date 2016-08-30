@@ -1,10 +1,12 @@
 class SummonsesController < ApplicationController
   before_action :set_summons, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, :except=>[:home]
 
   # GET /summonses
   # GET /summonses.json
   def index
     @summonses = Summons.all
+    @summonses = Summons.all.where(classroom: current_user.classroom)
   end
 
   # GET /summonses/1
@@ -69,6 +71,6 @@ class SummonsesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def summons_params
-      params.require(:summons).permit(:student, :teacher, :reason, :place)
+      params.require(:summons).permit(:student, :teacher, :reason, :place, :classroom)
     end
 end
