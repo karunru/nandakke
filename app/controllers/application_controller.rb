@@ -19,4 +19,10 @@ class ApplicationController < ActionController::Base
 		 	user_params.permit(:username, :password, :remember_me)
 		end
   end 
+	
+	def redirect_unless_admin
+    if current_user.role == 'member'
+     redirect_to root_path 
+		end
+	end
 end
