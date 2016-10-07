@@ -1,6 +1,10 @@
 GIT
   remote: https://github.com/plataformatec/devise.git
+<<<<<<< HEAD
   revision: 88724e10adaf9ffd1d8dbfbaadda2b9d40de756a
+=======
+  revision: 245b1f9de0b3386b7913e14b60ea24f43b77feb0
+>>>>>>> parent of c17805c... データベースをsqlite3に変更(コミットメッセージが文字化けしてた)
   specs:
     devise (4.2.0)
       bcrypt (~> 3.0)
@@ -49,12 +53,20 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+<<<<<<< HEAD
     arel (7.1.2)
+=======
+    arel (7.0.0)
+>>>>>>> parent of c17805c... データベースをsqlite3に変更(コミットメッセージが文字化けしてた)
     bcrypt (3.1.11)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
+<<<<<<< HEAD
     byebug (9.0.6)
+=======
+    byebug (9.0.5)
+>>>>>>> parent of c17805c... データベースをsqlite3に変更(コミットメッセージが文字化けしてた)
     cancancan (1.15.0)
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
@@ -67,6 +79,7 @@ GEM
     debug_inspector (0.0.2)
     erubis (2.7.0)
     execjs (2.7.0)
+<<<<<<< HEAD
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
@@ -74,6 +87,15 @@ GEM
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
     jquery-rails (4.2.1)
+=======
+    globalid (0.3.6)
+      activesupport (>= 4.1.0)
+    i18n (0.7.0)
+    jbuilder (2.5.0)
+      activesupport (>= 3.0.0, < 5.1)
+      multi_json (~> 1.2)
+    jquery-rails (4.1.1)
+>>>>>>> parent of c17805c... データベースをsqlite3に変更(コミットメッセージが文字化けしてた)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
@@ -82,6 +104,20 @@ GEM
     libv8 (3.16.14.15)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    mail (2.6.3)
+      mime-types (>= 1.16, < 3)
+    mime-types (2.99)
+    mini_portile2 (2.0.0)
+    minitest (5.8.3)
+    multi_json (1.11.2)
+    mysql2 (0.3.20)
+    nokogiri (1.6.7.1)
+      mini_portile2 (~> 2.0.0.rc2)
+=======
+>>>>>>> parent of c17805c... データベースをsqlite3に変更(コミットメッセージが文字化けしてた)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
     method_source (0.8.2)
@@ -89,12 +125,20 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
+<<<<<<< HEAD
     minitest (5.9.1)
+=======
+    minitest (5.9.0)
+>>>>>>> parent of c17805c... データベースをsqlite3に変更(コミットメッセージが文字化けしてた)
     multi_json (1.12.1)
     nio4r (1.2.1)
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
+<<<<<<< HEAD
+=======
+>>>>>>> e15985c... rails5化に伴いbundle update
+>>>>>>> parent of c17805c... データベースをsqlite3に変更(コミットメッセージが文字化けしてた)
     orm_adapter (0.5.0)
     pkg-config (1.1.7)
     rack (2.0.1)
@@ -123,17 +167,29 @@ GEM
       method_source
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
+<<<<<<< HEAD
     raindrops (0.17.0)
     rake (11.3.0)
+=======
+    raindrops (0.16.0)
+    rake (11.2.2)
+>>>>>>> parent of c17805c... データベースをsqlite3に変更(コミットメッセージが文字化けしてた)
     rdoc (4.2.2)
       json (~> 1.4)
     ref (2.0.0)
     rename (1.0.2)
       rails (>= 3.0.0)
+<<<<<<< HEAD
     responders (2.3.0)
       railties (>= 4.2.0, < 5.1)
     sass (3.4.22)
     sass-rails (5.0.6)
+=======
+    responders (2.2.0)
+      railties (>= 4.2.0, < 5.1)
+    sass (3.4.22)
+    sass-rails (5.0.5)
+>>>>>>> parent of c17805c... データベースをsqlite3に変更(コミットメッセージが文字化けしてた)
       railties (>= 4.0.0, < 6)
       sass (~> 3.1)
       sprockets (>= 2.8, < 4.0)
@@ -142,28 +198,43 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+<<<<<<< HEAD
     spring (2.0.0)
       activesupport (>= 4.2)
     sprockets (3.7.0)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
     sprockets-rails (3.2.0)
+=======
+    spring (1.7.2)
+    sprockets (3.6.3)
+      concurrent-ruby (~> 1.0)
+      rack (> 1, < 3)
+    sprockets-rails (3.1.1)
+>>>>>>> parent of c17805c... データベースをsqlite3に変更(コミットメッセージが文字化けしてた)
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.3.11)
     therubyracer (0.12.2)
       libv8 (~> 3.16.14.0)
       ref
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.5)
+<<<<<<< HEAD
     turbolinks (5.0.1)
+=======
+    turbolinks (5.0.0)
+>>>>>>> parent of c17805c... データベースをsqlite3に変更(コミットメッセージが文字化けしてた)
       turbolinks-source (~> 5)
     turbolinks-source (5.0.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+<<<<<<< HEAD
     uglifier (3.0.2)
+=======
+    uglifier (3.0.0)
+>>>>>>> parent of c17805c... データベースをsqlite3に変更(コミットメッセージが文字化けしてた)
       execjs (>= 0.3.0, < 3)
     unicorn (5.1.0)
       kgio (~> 2.6)
@@ -189,12 +260,20 @@ DEPENDENCIES
   devise!
   jbuilder (~> 2.0)
   jquery-rails
+<<<<<<< HEAD
   rails (= 5.0.0)
+=======
+<<<<<<< HEAD
+  mysql2 (~> 0.3.17)
+  rails (= 4.2.5)
+=======
+  rails (= 5.0.0)
+>>>>>>> e15985c... rails5化に伴いbundle update
+>>>>>>> parent of c17805c... データベースをsqlite3に変更(コミットメッセージが文字化けしてた)
   rename
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
-  sqlite3
   therubyracer
   turbolinks
   uglifier (>= 1.3.0)
@@ -202,4 +281,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.12.5
+   1.11.2
