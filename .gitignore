@@ -52,3 +52,6 @@ bower.json
 
 # Ignore pow environment settings
 .powenv
+
+# Ignore users data's file
+.csv
