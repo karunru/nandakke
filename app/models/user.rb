@@ -30,6 +30,6 @@ class User < ActiveRecord::Base
   end
 
 	#cancanでの権限管理用
-	ROLES = %i[member editor admin]
+	ROLES = %i[member editor teacher admin]
 
 end
