@@ -5,7 +5,7 @@
 
   <div class="field">
     <%= f.label :username %><br />
-    <%= f.text_field :username, autofocus: true %>
+    <%= f.text_field :username, readonly: true %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -14,7 +14,7 @@
 
   <div class="field">
     <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <%= f.password_field :password, autocomplete: "off", autofocus: true %>
   </div>
 
   <div class="field">
