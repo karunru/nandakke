@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   #GET /users
   def index
     if current_user.role == "teacher"
-      @users = User.all.where(classroom: current_user.classroom).where('username REGEXP ?', '^j[0-9]*')
+      @users = User.all.where(classroom: current_user.classroom).where('username REGEXP ?', '^j[0-9]{5}')
     else
       redirect_to root_path
     end
