@@ -1,3 +1,11 @@
-<%= link_to 'edit summonses', '/summonses' %>
-<%= link_to 'edit schedules', '/schedules' %>
-<%= link_to 'logout', destroy_user_session_path %>
+<% if current_user.role == 'teacher' %>
+  <%= link_to '学生権限管理', users_path %>
+  <%= link_to '呼び出し情報編集', summonses_path %>
+  <%= link_to 'スケジュール編集', schedules_path %>
+<% elsif current_user.role == 'editor' %>
+  <%= link_to '呼び出し情報編集', summonses_path %>
+  <%= link_to 'スケジュール編集', schedules_path %>
+<% end %>
+
+<%= link_to 'ユーザ情報編集', '/users/edit' %>
+<%= link_to 'ログアウト', destroy_user_session_path %>
