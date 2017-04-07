@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20160720055819) do
 
-  create_table "schedules", force: :cascade do |t|
+  create_table "schedules", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "schedule_type"
     t.date     "deadline_date"
     t.time     "deadline_time"
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20160720055819) do
     t.string   "classroom"
   end
 
-  create_table "summonses", force: :cascade do |t|
+  create_table "summonses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "student"
     t.string   "teacher"
     t.string   "reason"
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20160720055819) do
     t.string   "classroom"
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email"
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 20160720055819) do
     t.string   "username"
     t.string   "role"
     t.string   "classroom"
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
 end
