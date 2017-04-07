@@ -18,11 +18,14 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_in) do |user_params|
 		 	user_params.permit(:username, :password, :remember_me)
 		end
-  end 
-	
+    devise_parameter_sanitizer.permit(:account_update) do |user_params|
+		 	user_params.permit(:password, :classroom, :current_password)
+		end
+  end
+
 	def redirect_unless_admin
     if current_user.role == 'member'
-     redirect_to root_path 
+     redirect_to root_path
 		end
 	end
 end
