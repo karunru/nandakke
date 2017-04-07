@@ -1,4 +1,4 @@
-for i in 1:5
+for i in 1:8
 	println("J", i, "-teacher", ",", "teacher", ",", "J", i)
 	println("pi-J", i, ",", "member", ",", "J", i)
 	for j in 01:50
