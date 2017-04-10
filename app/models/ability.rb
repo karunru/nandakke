@@ -31,13 +31,18 @@ class Ability
 		def initialize(user)
 			if user.role == 'admin'
 				can :manege, :all
+      elsif user.role == 'teacher'
+        can :manege, Summons.all.where(classroom: user.classroom)
+        can :manege, Schedule.all.where(classroom: user.classroom)
+				can :manege, User.all.where(classroom: user.classroom)        
 			elsif user.role == 'editor'
-				can :manege, Summons, owner: user	#表示されないけど一応自分がオーナーの情報しか編集できないようにする
-				can :manege, Schedule, owner: user
-				cannot :manege, User
+        can :manege, Summons.all.where(classroom: user.classroom)
+        can :manege, Schedule.all.where(classroom: user.classroom)
+				can :manege, User.all.where(username: user.username)
 			elsif user.role == 'member'
-				can :read, :all
-				can :manege, User
+				can :read, Summons.all.where(classroom: user.classroom)
+        can :read, Schedule.all.where(classroom: user.classroom)
+				can :manege, User.all.where(username: user.username)
 			else
 				cannot :manege, User
 			end

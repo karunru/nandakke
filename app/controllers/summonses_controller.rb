@@ -1,6 +1,7 @@
 class SummonsesController < ApplicationController
   before_action :set_summons, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, :except=>[:home]
+	before_filter :authenticate_user!, :redirect_unless_admin
 
   # GET /summonses
   # GET /summonses.json

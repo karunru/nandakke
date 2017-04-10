@@ -4,13 +4,28 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   #before_filterを設定
-  before_filter :configure_permitted_parameters, if: :devise_controller?
+  before_action :configure_permitted_parameters, if: :devise_controller?
 
   protected
 
   def configure_permitted_parameters
     #strong parametersを設定し、usernameを許可
-    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:username, :password, :password_confirmation) }
-    devise_parameter_sanitizer.for(:sign_in) { |u| u.permit(:username, :password, :remember_me) }
-  end 
+    # devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:username, :password, :password_confirmation) }
+    # devise_parameter_sanitizer.for(:sign_in) { |u| u.permit(:username, :password, :remember_me) }
+    devise_parameter_sanitizer.permit(:sign_up) do |user_params|
+			user_params.permit(:username, :password, :password_confirmation, :role, :classroom)
+		end
+    devise_parameter_sanitizer.permit(:sign_in) do |user_params|
+		 	user_params.permit(:username, :password, :remember_me)
+		end
+    devise_parameter_sanitizer.permit(:account_update) do |user_params|
+		 	user_params.permit(:password, :password_confirmation, :classroom, :current_password)
+		end
+  end
+
+	def redirect_unless_admin
+    if current_user.role == 'member'
+     redirect_to root_path
+		end
+	end
 end

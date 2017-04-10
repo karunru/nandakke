@@ -1,5 +1,6 @@
 class Users::RegistrationsController < Devise::RegistrationsController 
-	before_action :authenticate_user!, :redirect_unless_admin
+	#before_action :authenticate_user!, :redirect_unless_admin
+	before_action :authenticate_user!
 
 	prepend_before_action :require_no_authentication, :only => [ :cancel]
 	prepend_before_action :authenticate_scope!, :only => [:new, :create ,:edit, :update, :destroy]
@@ -8,9 +9,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
 # before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
-  # def new
-  #   super
-  # end
+  def new
+    redirect_to root_path
+  end
 
   # POST /resource
   # def create

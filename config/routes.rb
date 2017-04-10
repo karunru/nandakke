@@ -4,6 +4,11 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => {
 		 :registrations => 'users/registrations'
 	}
+
+  match '/users/update_all' => 'users#update_all', as: 'update_all', :via => :put
+
+  resources :users, :only => :index
+
   get 'home/index'
 
   resources :schedules

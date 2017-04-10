@@ -5,6 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+require "csv"
 
 user = User.new(:id => 1, :password => 'admin', :username => 'admin', :role => 'admin', :classroom => '*')
 user.save!
+
+CSV.foreach('db/data.csv') do |row|
+  user = User.new(:password => row[0], :username => row[0], :role => row[1], :classroom => row[2])
+  user.save!
+end
