@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+before_filter :authenticate_user!, :except=>[:home]
   def index
 		@summonses = Summons.all
 		@summonses = Summons.all.where(classroom: current_user.classroom)
